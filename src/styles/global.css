@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('/DM_Sans/DM_Sans.ttf');
+}
+
+body {
+    font-family: 'DM Sans';
+}

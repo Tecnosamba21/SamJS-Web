@@ -1,0 +1,11 @@
+---
+import '../styles/global.css'
+
+interface Props {
+    classes: string
+}
+
+const {classes} = Astro.props
+---
+
+<a href="/"><h2 class={"text-[#38b6ff] " + classes}>Sam<span class="text-[#FFFF00]">JS</span></h2></a>

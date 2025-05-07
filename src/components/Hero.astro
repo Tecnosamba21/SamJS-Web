@@ -1,0 +1,31 @@
+---
+import '../styles/global.css'
+import Logo from './Logo.astro'
+---
+
+<div class="w-full flex items-center justify-center py-20">
+    <main class="flex flex-col items-center justify-center">
+        <Logo classes='text-6xl font-bold' />
+        <p class="my-5 text-[18px]">An <span class="text-[#38b6ff]">Open Source</span> free in-real-time <span class="text-[#FFFF00]">JavaScript</span> runner</p>
+        <img src="/GUI.png" alt="GUI of the app" id="GUI">
+    </main>
+</div>
+
+<style>
+    @keyframes appear {
+        0% {
+            opacity: 0%;
+        }
+        100% {
+            opacity: 100%;
+        }
+    }
+
+    #GUI {
+        opacity: 0%;
+        animation-name: appear;
+        animation-duration: 1s;
+        animation-delay: .35s;
+        animation-fill-mode: forwards;
+    }
+</style>
