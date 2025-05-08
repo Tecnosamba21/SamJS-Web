@@ -7,7 +7,7 @@ import Logo from './Logo.astro'
     <main class="flex flex-col items-center justify-center">
         <Logo classes='text-6xl font-bold' />
         <p class="my-5 text-[18px]">An <span class="text-[#38b6ff]">Open Source</span> free in-real-time <span class="text-[#FFFF00]">JavaScript</span> runner</p>
-        <img src="/GUI.png" alt="GUI of the app" id="GUI">
+        <img src="/GUI.png" alt="GUI of the app" id="GUI" class="">
     </main>
 </div>
 
@@ -15,17 +15,16 @@ import Logo from './Logo.astro'
     @keyframes appear {
         0% {
             opacity: 0%;
+            filter: blur(20px);
         }
-        100% {
-            opacity: 100%;
+
+        10% {
+            opacity: 1;
+            filter: brightness(1.5) blur(10px);
         }
     }
 
     #GUI {
-        opacity: 0%;
-        animation-name: appear;
-        animation-duration: 1s;
-        animation-delay: .35s;
-        animation-fill-mode: forwards;
+        animation: appear 1s;
     }
 </style>

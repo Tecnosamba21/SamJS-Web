@@ -10,7 +10,7 @@ const {isDownload} = Astro.props
 ---
 
 <div class="flex w-full h-20 items-center justify-center fixed z-999" id="aside">
-    <aside class="flex flex-row justify-between w-200 h-20 items-center backdrop-blur-md rounded-2xl px-20">
+    <aside class="flex flex-row justify-between w-full h-20 items-center backdrop-blur-md rounded-2xl px-2 md:px-20 md:w-200" transition:name="aside-bar">
         <div class="flex gap-5 items-center">
             <img src="/favicon.png" alt="Icon" class="h-10 w-10" />
             <Logo classes="text-3xl"/>
@@ -18,7 +18,7 @@ const {isDownload} = Astro.props
         <div class="flex gap-8">
             <a href="/#FAQ" class="text-0.5 rounded-sm p-2 transition-all hover:[text-shadow:0_0_1px_white]">FAQ</a>
             <a href="https://samjs.vercel.app" class="text-0.5 rounded-sm p-2 transition-all hover:[text-shadow:0_0_1px_white]">Web</a>
-            <a href="/download" class={isDownload ? "text-0.5 p-2 transition-all hover:[text-shadow:0_0_1px_white] bg-[#38b6ff] rounded-sm hidden" : "text-0.5 p-2 transition-all hover:[text-shadow:0_0_1px_white] bg-[#38b6ff] rounded-sm"}>Download</a>
+            <a href="/download" class={isDownload ? "text-0.5 p-2 transition-all hover:[text-shadow:0_0_1px_white] bg-[#38b6ff] rounded-sm hidden" : "text-0.5 p-2 transition-all hover:[text-shadow:0_0_1px_white] bg-[#38b6ff] rounded-sm hidden md:flex"}>Download</a>
         </div>
     </aside>
 </div>
